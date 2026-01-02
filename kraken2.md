@@ -50,7 +50,8 @@ conda activate kraken2
 Install Bracken after cloning the Github Repo
 ```bash
 git clone https://github.com/jenniferlu717/Bracken/
-bash Bracken/install_bracken.sh 
+bash Bracken/install_bracken.sh
+export PATH="$PATH:/u/home/j/jpjacobs/project-jpjacobs/Julianne_Mouse_Gut_MGnify/Bracken/bracken"
 ```
 
 Download input files required for Bracken
