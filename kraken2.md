@@ -2,6 +2,10 @@
 
 ## Installation (just the first time) 
 
+### Software versions 
+Bracken 2.9
+
+
 ### Database source 
 https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/
 
