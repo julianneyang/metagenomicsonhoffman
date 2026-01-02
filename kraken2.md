@@ -14,10 +14,15 @@ Kracken 2.1.6
 ### Database source 
 https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/
 
-### Install Kraken database files into working directory 
-Download database.kraken, hash.k2d, opts.k2d, and taxo.k2d.  
+
 
 ### Kraken
+
+Install Kraken database files into working directory. Download database.kraken, hash.k2d, opts.k2d, and taxo.k2d.  
+
+```bash
+```
+
 Create a new conda env for kraken2 
 
 ```bash
@@ -36,7 +41,10 @@ conda create --name bracken
 conda activate kraken2
 ```
 Install Bracken after cloning the Github Repo
-
+```bash
+git clone https://github.com/jenniferlu717/Bracken/
+bash Bracken/install_bracken.sh 
+```
 
 Download input files required for Bracken
 ```bash
