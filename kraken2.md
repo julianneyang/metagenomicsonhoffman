@@ -3,9 +3,9 @@
 ## Installation (One time only, written mainly for myself to look back on) 
 
 ### Software versions 
-Bracken 2.9
-Kracken 2.1.6 
-Kneaddata v.10.0
+- Bracken 2.9
+- Kracken 2.1.6 
+- Kneaddata v.10.0
 
 ### Working Directory 
 ```bash
