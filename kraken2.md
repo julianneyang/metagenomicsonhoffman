@@ -46,6 +46,21 @@ Run Bracken abundance esimation
 Bracken/bracken -d ./ -i kraken_report -o 33_SMT_Neg_16J.bracken -r 150
 ```
 
+### Building a Nextflow pipeline 
+
+Install Nextflow into a new conda env
+```bash
+conda create --name nextflow_kraken_mouse
+conda activate nextflow_kraken_mouse
+```
+```bash
+conda install bioconda::nextflow
+```
+Grabbed the nexflow pipeline from Oxford Nanopore tech
+```bash
+nextflow pull epi2me-labs/wf-metagenomics
+```
+
 
 
 ## After Installation
