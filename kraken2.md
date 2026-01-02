@@ -78,6 +78,20 @@ Bracken/bracken -d ./ -i kraken_report -o 33_SMT_Neg_16J.bracken -r 150
 git clone https://github.com/jenniferlu717/KrakenTools
 ```
 
+### Scaling for Many Samples 
+Set up project directory like so:
+```bash
+project/
+├── data/
+│   ├── sample1_R1.fastq.gz
+│   ├── sample1_R2.fastq.gz
+│   ├── sample2_R1.fastq.gz
+│   └── sample2_R2.fastq.gz
+├── kraken/
+├── bracken/
+├── combined/
+└── run_pipeline.sh
+```
 ### Building a Nextflow pipeline 
 
 Install Nextflow into a new conda env
