@@ -17,6 +17,7 @@ https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/k
 
 ### Decontamination of Host Sequences 
 We use Biobakery kneaddata for this purpose.
+
 ```bash
 qsub ../humann_scripts/run_kneaddata_mouse.sh 33_SLC_SMT_NEG_16J_S129_L005_R1_001.fastq 33_SLC_SMT_NEG_16J_S129_L005_R2_001.fastq.gz
 ```
@@ -70,6 +71,11 @@ Bracken/bracken-build -d ./ -t 8 -k 35 -l 67
 Run Bracken abundance esimation
 ```bash
 Bracken/bracken -d ./ -i kraken_report -o 33_SMT_Neg_16J.bracken -r 150
+```
+
+### Kraken Tools 
+```bash
+git clone https://github.com/jenniferlu717/KrakenTools
 ```
 
 ### Building a Nextflow pipeline 
