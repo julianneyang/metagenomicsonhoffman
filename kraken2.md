@@ -17,6 +17,8 @@ Create a new conda env for bracken
 ```
 
 ### Bracken 
+Bracken is used to correct abundance estimates, because Kraken2 is biased by genome length, i.e. organisms with larger genomes will get more reads assigned to them.
+
 Install Bracken after cloning the Github Repo
 
 
@@ -26,5 +28,9 @@ Build a Bracken database
 Bracken/bracken-build -d ./ -t 8 -k 35 -l 67
 
 ``` 
+Run Bracken abundance esimation
+```bash
+Bracken/bracken -d ./ -i kraken_report -o 33_SMT_Neg_16J.bracken -r 150
+```
 
 
