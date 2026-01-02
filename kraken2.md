@@ -5,6 +5,7 @@
 ### Software versions 
 Bracken 2.9
 Kracken 2.1.6 
+Kneaddata v.10.0
 
 ### Working Directory 
 ```bash
@@ -14,6 +15,11 @@ Kracken 2.1.6
 ### Database source 
 https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/
 
+### Decontamination of Host Sequences 
+We use Biobakery kneaddata for this purpose.
+```bash
+qsub ../humann_scripts/run_kneaddata_mouse.sh 33_SLC_SMT_NEG_16J_S129_L005_R1_001.fastq 33_SLC_SMT_NEG_16J_S129_L005_R2_001.fastq.gz
+```
 
 
 ### Kraken
