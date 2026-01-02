@@ -1,32 +1,40 @@
 # Preprocessing metagenomics using Kraken2/Bracken pipeline
 
-## Installation (just the first time) 
+## Installation (One time only, written mainly for myself to look back on) 
 
 ### Software versions 
 Bracken 2.9
+Kracken 2.1.6 
 
+### Working Directory 
+```bash
+/u/home/j/jpjacobs/project-jpjacobs/Julianne_Mouse_Gut_MGnify
+```
 
 ### Database source 
 https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/
 
+### Install Kraken database files into working directory 
+Download database.kraken, hash.k2d, opts.k2d, and taxo.k2d.  
+
 ### Kraken
 Create a new conda env for kraken2 
 
-
-
-
-Create a new conda env for bracken
 ```bash
-
-```
-
-```bash
+conda create --name kraken2
+conda activate kraken2
+conda install -c bioconda kraken2=2.1.3
 
 ```
 
 ### Bracken 
 Bracken is used to correct abundance estimates, because Kraken2 is biased by genome length, i.e. organisms with larger genomes will get more reads assigned to them.
 
+Create a new conda env for bracken
+```bash
+conda create --name bracken
+conda activate kraken2
+```
 Install Bracken after cloning the Github Repo
 
 
