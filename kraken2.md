@@ -1,5 +1,36 @@
 # Preprocessing metagenomics using Kraken2/Bracken pipeline
 
+
+## Quickstart - Follow these instructions once installations are complete.
+The following shell scripts are located in the `kraken_scripts` folder bundled with this repo.
+
+Set up project directory like so:
+```bash
+project/
+├── data/
+│   ├── sample1_R1_001.fastq.gz
+│   ├── sample1_R2_001.fastq.gz
+└── run_kneaddata_pipeline.sh
+└── run_kraken_pipeline.sh
+└── run_bracken_pipeline.sh
+
+```
+The following works for many paired-end files in the `data` directory, as the scripts contain for loops.
+
+Then, all you need to do is:
+
+```bash
+qsub run_kneaddata_pipeline.sh
+```
+```bash
+qsub run_kraken_pipeline.sh
+```
+
+After that job is complete, do: 
+```bash
+qsub run_bracken_pipeline.sh
+```
+
 ## Installation (One time only, written mainly for myself to look back on) 
 
 ### Software versions 
@@ -83,38 +114,8 @@ Bracken/bracken -d ./ -i kraken_report -o 33_SMT_Neg_16J.bracken -r 150
 git clone https://github.com/jenniferlu717/KrakenTools
 ```
 
-## Quickstart - Follow these instructions once installations are complete.
-The following shell scripts are located in the `kraken_scripts` folder bundled with this repo.
 
-Set up project directory like so:
-```bash
-project/
-├── data/
-│   ├── sample1_R1_001.fastq.gz
-│   ├── sample1_R2_001.fastq.gz
-└── run_kneaddata_pipeline.sh
-└── run_kraken_pipeline.sh
-└── run_bracken_pipeline.sh
-
-```
-The following works for many paired-end files in the `data` directory, as the scripts contain for loops.
-
-Then, all you need to do is:
-
-```bash
-qsub run_kneaddata_pipeline.sh
-```
-```bash
-qsub run_kraken_pipeline.sh
-```
-
-After that job is complete, do: 
-```bash
-qsub run_bracken_pipeline.sh
-```
-
-
-### Building a Nextflow pipeline - TBD
+## Building a Nextflow pipeline - TBD
 
 Install Nextflow into a new conda env
 ```bash
