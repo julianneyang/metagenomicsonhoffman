@@ -28,6 +28,10 @@ qsub ../humann_scripts/run_kneaddata_mouse.sh 33_SLC_SMT_NEG_16J_S129_L005_R1_00
 Install Kraken database files into working directory. Download database.kraken, hash.k2d, opts.k2d, and taxo.k2d.  
 
 ```bash
+wget https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/database.kraken
+wget https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/hash.k2d
+wget https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/opts.k2d
+wget https://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/mouse-gut/v1.0/kraken2_db_mouse-gut_v1.0/taxo.k2d
 ```
 
 Create a new conda env for kraken2 
@@ -90,9 +94,21 @@ project/
 │   └── sample2_R2.fastq.gz
 ├── kraken/
 ├── bracken/
-├── combined/
-└── run_pipeline.sh
+└── run_kraken.sh
+└── run_bracken.sh
 ```
+
+Then, all you need to do is:
+```bash
+qsub run_kraken.sh
+```
+
+After that job is complete, do: 
+```bash
+qsub run_bracken.sh
+```
+
+
 ### Building a Nextflow pipeline 
 
 Install Nextflow into a new conda env
@@ -107,7 +123,7 @@ Grabbed the nexflow pipeline from Oxford Nanopore tech
 ```bash
 nextflow pull epi2me-labs/wf-metagenomics
 ```
-
+TBD 
 
 
 ## After Installation
