@@ -10,6 +10,7 @@ project/
 ├── data/
 │   ├── sample1_R1_001.fastq.gz
 │   ├── sample1_R2_001.fastq.gz
+└── gzip_kneaddata_pipeline.sh
 └── run_kneaddata_pipeline.sh
 └── run_kraken_pipeline.sh
 └── run_bracken_pipeline.sh
@@ -19,9 +20,15 @@ The following works for many paired-end files in the `data` directory, as the sc
 
 Then, all you need to do is:
 
+This script may take a while and you may need to increase the threads or time limit. However, I feel that it is helpful to have a single joblog file to see which reads were unmatched or contaminating reads.
+
+Currently, we are in the project root folder.
+
 ```bash
 qsub run_kneaddata_pipeline.sh
 ```
+
+zipping of kneaddata final outputs is necessary for kraken, do this:
 ```bash
 qsub gzip_kneaddata_pipeline.sh
 ```
@@ -34,6 +41,11 @@ bash run_kraken_pipeline.sh
 After that job is complete, do: 
 ```bash
 bash run_bracken_pipeline.sh
+```
+Finally, to create the final output file:
+```bash
+cd bracken
+python /u/home/j/jpjacobs/project-jpjacobs/Julianne_Mouse_Gut_MGnify/Bracken/analysis_scripts/combine_bracken_outputs.py --files * --output slc_smt_bracken_table.tsv
 ```
 
 ## Installation (One time only, written mainly for myself to look back on) 
