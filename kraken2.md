@@ -23,12 +23,17 @@ Then, all you need to do is:
 qsub run_kneaddata_pipeline.sh
 ```
 ```bash
-qsub run_kraken_pipeline.sh
+qsub gzip_kneaddata_pipeline.sh
+```
+
+Run these interactively (very fast)
+```bash
+bash run_kraken_pipeline.sh
 ```
 
 After that job is complete, do: 
 ```bash
-qsub run_bracken_pipeline.sh
+bash run_bracken_pipeline.sh
 ```
 
 ## Installation (One time only, written mainly for myself to look back on) 
